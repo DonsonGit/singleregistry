@@ -63,19 +63,19 @@ spec:
 指定执行所定义的文件     
 `kubectl create -f .`     
 检查执行结果     
-_查看分配的NodePort_     
+##### 查看分配的NodePort   
 `kubectl get services kubernetes-dashboard -n kube-system`     
-_检查Controller_     
+##### 检查Controller
 ```
 kubectl get deployment kubernetes-dashboard -n kube-system
 kubectl get pods -n kube-system | grep dashboard
 ```
-访问dashboard     
+## 访问dashboard     
 ### 有三种方式
 - kubernetes-dashboard服务暴露了NodePort，可以使用`http://NodeIP:NodePort`地址访问dashboard。
 - 通过API server 访问 dashboard （https 6443端口和http 8080端口）。
 - 通过kubectl proxy 访问 dashboard。
-_通过kubectl proxy访问dashboard_     
+##### 通过kubectl proxy访问dashboard  
 启动代理     
 ```
 kubectl proxy --address='172.20.0.113' --port=8086 --accept-hosts='^*$'
@@ -87,17 +87,17 @@ kubectl proxy --port=8086 --accept-hosts='^*$'
 Starting to serve on 127.0.0.1:8086
 ```
 浏览器访问URL：<http://172.20.0.113:8086/ui> 自动跳转到 <http://172.20.0.113:8086/api/v1/proxy/namespaces/kube-system/services/kubernetes-dashboard/#/workload?namespace=default>。     
-_通过API server访问dashboard_     
+##### 通过API server访问dashboard   
 获取集群服务地址列表     
 ```
 kubectl cluster-info
 ```
 浏览器访问 <https://172.20.0.113:6443/api/v1/proxy/namespaces/kube-system/services/kubernetes-dashboard> 浏览器会提示导入证书到计算机中，需要提前手动导入，填坑贴 [通过kube-apiserver访问dashboard，提示User"system:anonymous"cannot proxy services in the namespace "kube-system".](https://github.com/opsnull/follow-me-install-kubernetes-cluster/issues/5)。     
-_导入证书_
+##### 导入证书
 将生成的admin.pem证书转换格式     
 `openssl pkcs12 -export in admin.pem -out admin.p12 -inkey admin-key.pem`     
 将生成的admin.p12证书导入电脑，记住密码。     
 如果不想使用**https**，可以直接访问insecure port 8080端口：     
 <http://172.20.0.113:8080/api/v1/proxy/namespaces/kube-system/services/kubernetes-dashboard>     
-显示dashboard的Pod、Node的CPU、内存等metric图形的插件***Heapster***     
+显示dashboard的Pod、Node的CPU、内存等metric图形的插件**Heapster**     
 
