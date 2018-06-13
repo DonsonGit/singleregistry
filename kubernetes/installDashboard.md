@@ -4,18 +4,18 @@ __kubernetes版本__：v1.9.4
 __kubernetes-dashboard__：[官方文件目录](https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/dashboard)     
 ******
 ## 部署文件
-部署文件为以下三个：     
+#### 部署文件为以下三个：     
 ```
 $ ls *.yaml
 dashboard-controller.yaml dashboard-service.yaml dashboard-rbac.yaml
 ```
-由于`kube-apiserver`启用了`RBAC`授权，而官方源码目录的`dashboard-controller.yaml`没有定义授权的ServiceAccount，所以后续访问API server的API的时候会被拒绝，Web中提示：     
+#### 由于`kube-apiserver`启用了`RBAC`授权，而官方源码目录的`dashboard-controller.yaml`没有定义授权的ServiceAccount，所以后续访问API server的API的时候会被拒绝，Web中提示：     
 ```
 Forbidden (403)
 User "system.serviceaccount:kube-system:default" cannot list jobs.batch in the
 namespace "default". (get jobs.batch)
 ```
-增加了一个`dashboard-rbac.yaml`文件定义一个名为dashboard的ServiceAccount，然后将它和Cluster
+#### 增加了一个`dashboard-rbac.yaml`文件定义一个名为dashboard的ServiceAccount，然后将它和Cluster
 Role view绑定，如下所示：     
 ```
 apiVersion: v1
@@ -37,9 +37,9 @@ roleRef:
   name: cluster-admin
   apiGroup: rbac.authorization.k8s.io
 ```
-然后使用`kubectl apply -f dashboard-rbac.yaml`创建     
+#### 然后使用`kubectl apply -f dashboard-rbac.yaml`创建     
 ## 配置dashboard-service
-在dashboard-service中增加NodePort，以此来提供外界可以通过地址NodeIP:NodePort来访问dashboard。     
+#### 在dashboard-service中增加NodePort，以此来提供外界可以通过地址NodeIP:NodePort来访问dashboard。     
 ```
 apiVersion: v1
 kind: Service
@@ -58,11 +58,11 @@ spec:
   - port: 80
     targetPort: 9090
 ```
-更换dashboard-controller中的镜像为所需要的镜像本地或私有镜像仓库，官方镜像天朝无法拿到，需要科学上网，也可以通过某些可科学上网的设备下载镜像，推送到私有仓库以提供使用。     
+#### 更换dashboard-controller中的镜像为所需要的镜像本地或私有镜像仓库，官方镜像天朝无法拿到，需要科学上网，也可以通过某些可科学上网的设备下载镜像，推送到私有仓库以提供使用。     
 `image: gcr.io/google_containers/kubernetes-dashboard-amd64:v1.6.0`     
-指定执行所定义的文件     
+#### 指定执行所定义的文件     
 `kubectl create -f .`     
-检查执行结果     
+#### 检查执行结果     
 ##### 查看分配的NodePort   
 `kubectl get services kubernetes-dashboard -n kube-system`     
 ##### 检查Controller
