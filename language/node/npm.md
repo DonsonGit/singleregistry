@@ -49,12 +49,12 @@ npm --registry=https://registry.npm.taobao.org install cnpm -g
 cnpm sync xxx connect mocha
 ```
 #### 5.nvm常用命令
-- nvm install <version> 安装指定版本node
-- nvm uninstall <version> 卸载指定版本node
-- nvm use <version> 切换指定版本node
+- nvm install \<version\> 安装指定版本node
+- nvm uninstall \<version\> 卸载指定版本node
+- nvm use \<version\> 切换指定版本node
 - nvm ls 列出所安装的node版本
 - nvm ls-remote 列出远程服务器node 版本
 - nvm current 显示当前版本
-- nvm alias <name> <version> 为指定版本添加别名
-- nvm unalias <name> 删除别名
-- nvm reinstall-packages <version> 重新安装指定版本node
+- nvm alias \<name\> \<version\> 为指定版本添加别名
+- nvm unalias \<name\> 删除别名
+- nvm reinstall-packages \<version\> 重新安装指定版本node
