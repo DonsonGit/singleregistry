@@ -27,12 +27,12 @@ func main() {
 转自：<https://twitter.com/davecheney/status/431581286918934528>     
 ![GOROOT&GOPATH][gorp]
 
-[gorp]:/asset/gorp.jpg
-### unbuffered channel
+[gorp]:../../asset/gorp.jpg
+### Go语言中的unbuffered channel
 下列两种方式创建的都是unbuffered channel:     
 > ch = make(chan int)
 > ch = make(chan int, 0)
-### 计算时间差
+### Go计算时间差
 ```
 package main
 
