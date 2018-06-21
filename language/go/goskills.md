@@ -31,7 +31,7 @@ func main() {
 [gorp]:https://github.com/DonsonGit/singleregistry/blob/master/asset/images/gorp.jpg
 ### Go语言中的unbuffered channel
 下列两种方式创建的都是unbuffered channel:     
-> ch = make(chan int)
+> ch = make(chan int)     
 > ch = make(chan int, 0)
 ### Go计算时间差
 ```
