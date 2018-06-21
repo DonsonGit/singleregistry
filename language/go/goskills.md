@@ -23,11 +23,12 @@ func main() {
 {name:Tom id:33}
 ```
 ### Go语言是否需要设置GOROOT和GOPATH？
-技巧出处：<https://nanxiao.me/category/%E6%8A%80%E6%9C%AF/go%E8%AF%AD%E8%A8%80%E5%AE%9E%E8%B7%B5%E6%8A%80%E5%B7%A7/>     
+技巧出处：[这里][h]     
 转自：<https://twitter.com/davecheney/status/431581286918934528>     
 ![GOROOT&GOPATH][gorp]
 
-[gorp]:../../asset/gorp.jpg
+[h]:https://nanxiao.me/category/%E6%8A%80%E6%9C%AF/go%E8%AF%AD%E8%A8%80%E5%AE%9E%E8%B7%B5%E6%8A%80%E5%B7%A7/
+[gorp]:https://github.com/DonsonGit/singleregistry/blob/master/asset/images/gorp.jpg
 ### Go语言中的unbuffered channel
 下列两种方式创建的都是unbuffered channel:     
 > ch = make(chan int)
