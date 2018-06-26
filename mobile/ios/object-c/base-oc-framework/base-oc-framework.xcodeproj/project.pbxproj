@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0536DDF020E23E64003A4B22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DDEF20E23E64003A4B22 /* AppDelegate.m */; };
-		0536DDF320E23E64003A4B22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DDF220E23E64003A4B22 /* ViewController.m */; };
 		0536DDF620E23E64003A4B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0536DDF420E23E64003A4B22 /* Main.storyboard */; };
 		0536DDF820E23E66003A4B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0536DDF720E23E66003A4B22 /* Assets.xcassets */; };
 		0536DDFB20E23E66003A4B22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0536DDF920E23E66003A4B22 /* LaunchScreen.storyboard */; };
@@ -56,14 +55,31 @@
 		0536DE9C20E24783003A4B22 /* DLCustomSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DE7020E24783003A4B22 /* DLCustomSlideView.m */; };
 		0536DE9D20E24783003A4B22 /* DLSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DE7120E24783003A4B22 /* DLSlideView.m */; };
 		0536DE9E20E24783003A4B22 /* GTDocumentPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DE7420E24783003A4B22 /* GTDocumentPreviewController.m */; };
+		0536DED520E28E53003A4B22 /* GTHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEA220E28E52003A4B22 /* GTHomePageViewController.m */; };
+		0536DED620E28E53003A4B22 /* GTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEA620E28E52003A4B22 /* GTMapViewController.m */; };
+		0536DED720E28E53003A4B22 /* GTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEAB20E28E52003A4B22 /* GTMineViewController.m */; };
+		0536DED820E28E53003A4B22 /* GTLoginViewModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEAF20E28E52003A4B22 /* GTLoginViewModal.m */; };
+		0536DED920E28E53003A4B22 /* GTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEB220E28E52003A4B22 /* GTRegisterViewController.m */; };
+		0536DEDA20E28E53003A4B22 /* GTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEB320E28E52003A4B22 /* GTLoginViewController.m */; };
+		0536DEDB20E28E53003A4B22 /* GTLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEB620E28E52003A4B22 /* GTLoginView.m */; };
+		0536DEDC20E28E53003A4B22 /* GTForgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEBB20E28E52003A4B22 /* GTForgetView.m */; };
+		0536DEDD20E28E53003A4B22 /* GTRegisterPhoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEBD20E28E52003A4B22 /* GTRegisterPhoneView.m */; };
+		0536DEDE20E28E53003A4B22 /* GTRegisterDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEBF20E28E52003A4B22 /* GTRegisterDetailView.m */; };
+		0536DEDF20E28E53003A4B22 /* GTKeyValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEC020E28E52003A4B22 /* GTKeyValueView.m */; };
+		0536DEE020E28E53003A4B22 /* GTGradualChangeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEC120E28E52003A4B22 /* GTGradualChangeLabel.m */; };
+		0536DEE120E28E53003A4B22 /* GTRacTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEC320E28E52003A4B22 /* GTRacTextField.m */; };
+		0536DEE220E28E53003A4B22 /* GTServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEC820E28E52003A4B22 /* GTServicesViewController.m */; };
+		0536DEE320E28E53003A4B22 /* GTNetApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DECA20E28E52003A4B22 /* GTNetApi.m */; };
+		0536DEE420E28E53003A4B22 /* GTNetCustionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DECC20E28E52003A4B22 /* GTNetCustionService.m */; };
+		0536DEE520E28E53003A4B22 /* GTBaseViewControler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DED220E28E52003A4B22 /* GTBaseViewControler.m */; };
+		0536DEE620E28E53003A4B22 /* GTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DED320E28E52003A4B22 /* GTNavigationController.m */; };
+		0536DEE920E28EB7003A4B22 /* DTabBarHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0536DEE820E28EB7003A4B22 /* DTabBarHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0536DDEB20E23E64003A4B22 /* base-oc-framework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "base-oc-framework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0536DDEE20E23E64003A4B22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0536DDEF20E23E64003A4B22 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0536DDF120E23E64003A4B22 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0536DDF220E23E64003A4B22 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0536DDF520E23E64003A4B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0536DDF720E23E66003A4B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0536DDFA20E23E66003A4B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -163,6 +179,45 @@
 		0536DE7120E24783003A4B22 /* DLSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSlideView.m; sourceTree = "<group>"; };
 		0536DE7320E24783003A4B22 /* GTDocumentPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDocumentPreviewController.h; sourceTree = "<group>"; };
 		0536DE7420E24783003A4B22 /* GTDocumentPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDocumentPreviewController.m; sourceTree = "<group>"; };
+		0536DEA220E28E52003A4B22 /* GTHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTHomePageViewController.m; sourceTree = "<group>"; };
+		0536DEA320E28E52003A4B22 /* GTHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTHomePageViewController.h; sourceTree = "<group>"; };
+		0536DEA620E28E52003A4B22 /* GTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMapViewController.m; sourceTree = "<group>"; };
+		0536DEA720E28E52003A4B22 /* GTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMapViewController.h; sourceTree = "<group>"; };
+		0536DEAA20E28E52003A4B22 /* GTMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMineViewController.h; sourceTree = "<group>"; };
+		0536DEAB20E28E52003A4B22 /* GTMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMineViewController.m; sourceTree = "<group>"; };
+		0536DEAE20E28E52003A4B22 /* GTLoginViewModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLoginViewModal.h; sourceTree = "<group>"; };
+		0536DEAF20E28E52003A4B22 /* GTLoginViewModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLoginViewModal.m; sourceTree = "<group>"; };
+		0536DEB120E28E52003A4B22 /* GTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLoginViewController.h; sourceTree = "<group>"; };
+		0536DEB220E28E52003A4B22 /* GTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRegisterViewController.m; sourceTree = "<group>"; };
+		0536DEB320E28E52003A4B22 /* GTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLoginViewController.m; sourceTree = "<group>"; };
+		0536DEB420E28E52003A4B22 /* GTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRegisterViewController.h; sourceTree = "<group>"; };
+		0536DEB620E28E52003A4B22 /* GTLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLoginView.m; sourceTree = "<group>"; };
+		0536DEB720E28E52003A4B22 /* GTRegisterPhoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRegisterPhoneView.h; sourceTree = "<group>"; };
+		0536DEB820E28E52003A4B22 /* GTGradualChangeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGradualChangeLabel.h; sourceTree = "<group>"; };
+		0536DEB920E28E52003A4B22 /* GTRegisterDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRegisterDetailView.h; sourceTree = "<group>"; };
+		0536DEBA20E28E52003A4B22 /* GTKeyValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTKeyValueView.h; sourceTree = "<group>"; };
+		0536DEBB20E28E52003A4B22 /* GTForgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTForgetView.m; sourceTree = "<group>"; };
+		0536DEBC20E28E52003A4B22 /* GTRacTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRacTextField.h; sourceTree = "<group>"; };
+		0536DEBD20E28E52003A4B22 /* GTRegisterPhoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRegisterPhoneView.m; sourceTree = "<group>"; };
+		0536DEBE20E28E52003A4B22 /* GTLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLoginView.h; sourceTree = "<group>"; };
+		0536DEBF20E28E52003A4B22 /* GTRegisterDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRegisterDetailView.m; sourceTree = "<group>"; };
+		0536DEC020E28E52003A4B22 /* GTKeyValueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTKeyValueView.m; sourceTree = "<group>"; };
+		0536DEC120E28E52003A4B22 /* GTGradualChangeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGradualChangeLabel.m; sourceTree = "<group>"; };
+		0536DEC220E28E52003A4B22 /* GTForgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTForgetView.h; sourceTree = "<group>"; };
+		0536DEC320E28E52003A4B22 /* GTRacTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRacTextField.m; sourceTree = "<group>"; };
+		0536DEC720E28E52003A4B22 /* GTServicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTServicesViewController.h; sourceTree = "<group>"; };
+		0536DEC820E28E52003A4B22 /* GTServicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTServicesViewController.m; sourceTree = "<group>"; };
+		0536DECA20E28E52003A4B22 /* GTNetApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNetApi.m; sourceTree = "<group>"; };
+		0536DECC20E28E52003A4B22 /* GTNetCustionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNetCustionService.m; sourceTree = "<group>"; };
+		0536DECD20E28E52003A4B22 /* GTNetCustionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNetCustionService.h; sourceTree = "<group>"; };
+		0536DECE20E28E52003A4B22 /* GTNetApiUrlDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNetApiUrlDefine.h; sourceTree = "<group>"; };
+		0536DECF20E28E52003A4B22 /* GTNetApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNetApi.h; sourceTree = "<group>"; };
+		0536DED120E28E52003A4B22 /* GTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNavigationController.h; sourceTree = "<group>"; };
+		0536DED220E28E52003A4B22 /* GTBaseViewControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBaseViewControler.m; sourceTree = "<group>"; };
+		0536DED320E28E52003A4B22 /* GTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNavigationController.m; sourceTree = "<group>"; };
+		0536DED420E28E52003A4B22 /* GTBaseViewControler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTBaseViewControler.h; sourceTree = "<group>"; };
+		0536DEE720E28EB7003A4B22 /* DTabBarHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTabBarHomeViewController.h; sourceTree = "<group>"; };
+		0536DEE820E28EB7003A4B22 /* DTabBarHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTabBarHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,8 +255,8 @@
 				0536DE0C20E245A5003A4B22 /* function */,
 				0536DDEE20E23E64003A4B22 /* AppDelegate.h */,
 				0536DDEF20E23E64003A4B22 /* AppDelegate.m */,
-				0536DDF120E23E64003A4B22 /* ViewController.h */,
-				0536DDF220E23E64003A4B22 /* ViewController.m */,
+				0536DEE720E28EB7003A4B22 /* DTabBarHomeViewController.h */,
+				0536DEE820E28EB7003A4B22 /* DTabBarHomeViewController.m */,
 				0536DDF420E23E64003A4B22 /* Main.storyboard */,
 				0536DDF720E23E66003A4B22 /* Assets.xcassets */,
 				0536DDF920E23E66003A4B22 /* LaunchScreen.storyboard */,
@@ -216,6 +271,9 @@
 		0536DE0C20E245A5003A4B22 /* function */ = {
 			isa = PBXGroup;
 			children = (
+				0536DE9F20E28E52003A4B22 /* classes */,
+				0536DED020E28E52003A4B22 /* commonView */,
+				0536DEC920E28E52003A4B22 /* netApi */,
 			);
 			path = function;
 			sourceTree = "<group>";
@@ -413,6 +471,176 @@
 			path = DocumentPreview;
 			sourceTree = "<group>";
 		};
+		0536DE9F20E28E52003A4B22 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				0536DEA020E28E52003A4B22 /* home */,
+				0536DEA420E28E52003A4B22 /* map */,
+				0536DEA820E28E52003A4B22 /* mine */,
+				0536DEAC20E28E52003A4B22 /* login */,
+				0536DEC520E28E52003A4B22 /* services */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		0536DEA020E28E52003A4B22 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				0536DEA120E28E52003A4B22 /* controller */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		0536DEA120E28E52003A4B22 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				0536DEA220E28E52003A4B22 /* GTHomePageViewController.m */,
+				0536DEA320E28E52003A4B22 /* GTHomePageViewController.h */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		0536DEA420E28E52003A4B22 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				0536DEA520E28E52003A4B22 /* controller */,
+			);
+			path = map;
+			sourceTree = "<group>";
+		};
+		0536DEA520E28E52003A4B22 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				0536DEA620E28E52003A4B22 /* GTMapViewController.m */,
+				0536DEA720E28E52003A4B22 /* GTMapViewController.h */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		0536DEA820E28E52003A4B22 /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				0536DEA920E28E52003A4B22 /* controller */,
+			);
+			path = mine;
+			sourceTree = "<group>";
+		};
+		0536DEA920E28E52003A4B22 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				0536DEAA20E28E52003A4B22 /* GTMineViewController.h */,
+				0536DEAB20E28E52003A4B22 /* GTMineViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		0536DEAC20E28E52003A4B22 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				0536DEAD20E28E52003A4B22 /* viewModal */,
+				0536DEB020E28E52003A4B22 /* controller */,
+				0536DEB520E28E52003A4B22 /* view */,
+				0536DEC420E28E52003A4B22 /* modal */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		0536DEAD20E28E52003A4B22 /* viewModal */ = {
+			isa = PBXGroup;
+			children = (
+				0536DEAE20E28E52003A4B22 /* GTLoginViewModal.h */,
+				0536DEAF20E28E52003A4B22 /* GTLoginViewModal.m */,
+			);
+			path = viewModal;
+			sourceTree = "<group>";
+		};
+		0536DEB020E28E52003A4B22 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				0536DEB120E28E52003A4B22 /* GTLoginViewController.h */,
+				0536DEB220E28E52003A4B22 /* GTRegisterViewController.m */,
+				0536DEB320E28E52003A4B22 /* GTLoginViewController.m */,
+				0536DEB420E28E52003A4B22 /* GTRegisterViewController.h */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		0536DEB520E28E52003A4B22 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0536DEB620E28E52003A4B22 /* GTLoginView.m */,
+				0536DEB720E28E52003A4B22 /* GTRegisterPhoneView.h */,
+				0536DEB820E28E52003A4B22 /* GTGradualChangeLabel.h */,
+				0536DEB920E28E52003A4B22 /* GTRegisterDetailView.h */,
+				0536DEBA20E28E52003A4B22 /* GTKeyValueView.h */,
+				0536DEBB20E28E52003A4B22 /* GTForgetView.m */,
+				0536DEBC20E28E52003A4B22 /* GTRacTextField.h */,
+				0536DEBD20E28E52003A4B22 /* GTRegisterPhoneView.m */,
+				0536DEBE20E28E52003A4B22 /* GTLoginView.h */,
+				0536DEBF20E28E52003A4B22 /* GTRegisterDetailView.m */,
+				0536DEC020E28E52003A4B22 /* GTKeyValueView.m */,
+				0536DEC120E28E52003A4B22 /* GTGradualChangeLabel.m */,
+				0536DEC220E28E52003A4B22 /* GTForgetView.h */,
+				0536DEC320E28E52003A4B22 /* GTRacTextField.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0536DEC420E28E52003A4B22 /* modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = modal;
+			sourceTree = "<group>";
+		};
+		0536DEC520E28E52003A4B22 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				0536DEC620E28E52003A4B22 /* controller */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		0536DEC620E28E52003A4B22 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				0536DEC720E28E52003A4B22 /* GTServicesViewController.h */,
+				0536DEC820E28E52003A4B22 /* GTServicesViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		0536DEC920E28E52003A4B22 /* netApi */ = {
+			isa = PBXGroup;
+			children = (
+				0536DECB20E28E52003A4B22 /* NetCustomService */,
+				0536DECE20E28E52003A4B22 /* GTNetApiUrlDefine.h */,
+				0536DECF20E28E52003A4B22 /* GTNetApi.h */,
+				0536DECA20E28E52003A4B22 /* GTNetApi.m */,
+			);
+			path = netApi;
+			sourceTree = "<group>";
+		};
+		0536DECB20E28E52003A4B22 /* NetCustomService */ = {
+			isa = PBXGroup;
+			children = (
+				0536DECC20E28E52003A4B22 /* GTNetCustionService.m */,
+				0536DECD20E28E52003A4B22 /* GTNetCustionService.h */,
+			);
+			path = NetCustomService;
+			sourceTree = "<group>";
+		};
+		0536DED020E28E52003A4B22 /* commonView */ = {
+			isa = PBXGroup;
+			children = (
+				0536DED120E28E52003A4B22 /* GTNavigationController.h */,
+				0536DED220E28E52003A4B22 /* GTBaseViewControler.m */,
+				0536DED320E28E52003A4B22 /* GTNavigationController.m */,
+				0536DED420E28E52003A4B22 /* GTBaseViewControler.h */,
+			);
+			path = commonView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -488,47 +716,65 @@
 			files = (
 				0536DE7620E24783003A4B22 /* QFHttpErrorResult.m in Sources */,
 				0536DE9720E24783003A4B22 /* DLLRUCache.m in Sources */,
+				0536DEE020E28E53003A4B22 /* GTGradualChangeLabel.m in Sources */,
 				0536DE9920E24783003A4B22 /* DLScrollTabbarView.m in Sources */,
 				0536DE8020E24783003A4B22 /* MJPhoto.m in Sources */,
+				0536DEE220E28E53003A4B22 /* GTServicesViewController.m in Sources */,
 				0536DE8320E24783003A4B22 /* SDWebImageManager+MJ.m in Sources */,
 				0536DE9020E24783003A4B22 /* UIView+ShowTips.m in Sources */,
+				0536DEDD20E28E53003A4B22 /* GTRegisterPhoneView.m in Sources */,
 				0536DE9420E24783003A4B22 /* NSString+MD5.m in Sources */,
 				0536DE7C20E24783003A4B22 /* NSObject+APSDBAddtion.m in Sources */,
 				0536DE7820E24783003A4B22 /* QFHttpBaseService.m in Sources */,
+				0536DEE620E28E53003A4B22 /* GTNavigationController.m in Sources */,
+				0536DEDF20E28E53003A4B22 /* GTKeyValueView.m in Sources */,
 				0536DE7520E24783003A4B22 /* FTPopOverMenu.m in Sources */,
 				0536DE8920E24783003A4B22 /* RSA.m in Sources */,
 				0536DE8E20E24783003A4B22 /* DHGuidePageHUD.m in Sources */,
 				0536DE9E20E24783003A4B22 /* GTDocumentPreviewController.m in Sources */,
 				0536DE7F20E24783003A4B22 /* MJPhotoView.m in Sources */,
 				0536DE9A20E24783003A4B22 /* DLFixedTabbarView.m in Sources */,
+				0536DED520E28E53003A4B22 /* GTHomePageViewController.m in Sources */,
 				0536DE7D20E24783003A4B22 /* APSBeanUtils.m in Sources */,
 				0536DE9820E24783003A4B22 /* DLTabedSlideView.m in Sources */,
+				0536DEDB20E28E53003A4B22 /* GTLoginView.m in Sources */,
 				0536DE9220E24783003A4B22 /* UIScrollView+SpringHeadView.m in Sources */,
 				0536DE8820E24783003A4B22 /* DateUtil.m in Sources */,
 				0536DE7720E24783003A4B22 /* QFHttpTool.m in Sources */,
 				0536DE8D20E24783003A4B22 /* DHGifImageOperation.m in Sources */,
 				0536DE9620E24783003A4B22 /* UIImage+Common.m in Sources */,
+				0536DEDA20E28E53003A4B22 /* GTLoginViewController.m in Sources */,
 				0536DE7A20E24783003A4B22 /* APSSumByBaseObject.m in Sources */,
 				0536DE8A20E24783003A4B22 /* GTVoiceRecordingHelper.m in Sources */,
 				0536DE8F20E24783003A4B22 /* UIViewController+HUD.m in Sources */,
+				0536DEDE20E28E53003A4B22 /* GTRegisterDetailView.m in Sources */,
 				0536DE7B20E24783003A4B22 /* APSGroupByBaseObject.m in Sources */,
 				0536DE9C20E24783003A4B22 /* DLCustomSlideView.m in Sources */,
-				0536DDF320E23E64003A4B22 /* ViewController.m in Sources */,
 				0536DE8720E24783003A4B22 /* HLBaseArchiver.m in Sources */,
 				0536DDFE20E23E66003A4B22 /* main.m in Sources */,
 				0536DE8B20E24783003A4B22 /* GTAssetPickerHelper.m in Sources */,
+				0536DED720E28E53003A4B22 /* GTMineViewController.m in Sources */,
 				0536DE8520E24783003A4B22 /* ValidateUtil.m in Sources */,
+				0536DEE320E28E53003A4B22 /* GTNetApi.m in Sources */,
+				0536DEE920E28EB7003A4B22 /* DTabBarHomeViewController.m in Sources */,
 				0536DE7920E24783003A4B22 /* APSDBUtil.m in Sources */,
 				0536DE9B20E24783003A4B22 /* DLUtility.m in Sources */,
 				0536DE8220E24783003A4B22 /* MJPhotoProgressView.m in Sources */,
+				0536DED620E28E53003A4B22 /* GTMapViewController.m in Sources */,
 				0536DE9D20E24783003A4B22 /* DLSlideView.m in Sources */,
 				0536DE8620E24783003A4B22 /* CommonUtil.m in Sources */,
+				0536DEE520E28E53003A4B22 /* GTBaseViewControler.m in Sources */,
 				0536DE9520E24783003A4B22 /* UITableView+Nodata.m in Sources */,
+				0536DED920E28E53003A4B22 /* GTRegisterViewController.m in Sources */,
+				0536DEE120E28E53003A4B22 /* GTRacTextField.m in Sources */,
+				0536DED820E28E53003A4B22 /* GTLoginViewModal.m in Sources */,
+				0536DEE420E28E53003A4B22 /* GTNetCustionService.m in Sources */,
 				0536DE8420E24783003A4B22 /* MJPhotoBrowser.m in Sources */,
 				0536DE9120E24783003A4B22 /* MBProgressHUD+Add.m in Sources */,
 				0536DE7E20E24783003A4B22 /* MJPhotoLoadingView.m in Sources */,
 				0536DDF020E23E64003A4B22 /* AppDelegate.m in Sources */,
 				0536DE8120E24783003A4B22 /* MJPhotoToolbar.m in Sources */,
+				0536DEDC20E28E53003A4B22 /* GTForgetView.m in Sources */,
 				0536DE9320E24783003A4B22 /* UIImage+Watermark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,6 +928,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z9Y8A2C792;
+				GCC_PREFIX_HEADER = "base-oc-framework/basepch.pch";
 				INFOPLIST_FILE = "base-oc-framework/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -700,6 +947,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z9Y8A2C792;
+				GCC_PREFIX_HEADER = "base-oc-framework/basepch.pch";
 				INFOPLIST_FILE = "base-oc-framework/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (

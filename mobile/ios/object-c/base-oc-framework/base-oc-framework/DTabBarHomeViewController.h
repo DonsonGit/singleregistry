@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DTabBarHomeViewController.h
 //  base-oc-framework
 //
 //  Created by 戴世豪 on 2018/6/26.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DTabBarHomeViewController : UITabBarController
 
 @end
-

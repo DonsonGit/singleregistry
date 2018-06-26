@@ -17,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    Class classname = NSClassFromString(@"GTTabBarHomeViewController");
+    self.window.rootViewController = [[classname alloc] init];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
