@@ -21,3 +21,5 @@
 [/server][6] 服务端     
   [/spider][6-1] 爬虫     
 [/README.md] 说明文件     
+
+[1] https://github.com/DonsonGit/singleregistry/tree/master/CNCF
