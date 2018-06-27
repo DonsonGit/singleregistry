@@ -51,9 +51,15 @@ Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯（John G
 `>>二级引用`     
 
 ### 链接
-`[Markdown](链接)`     
-`<https://www.xxx.com/>`     
+`[Markdown](链接 "描述")`     
+`<https://www.xxx.com/>` 
+```
+[Markdown][1]
+[1]:https://www.xxx.com "Markdown"
+```
 
 ### 列表标记
 列表标记以数字`1.,2.,3.,...`或者星号`*`或者`-`，`+`表示，其中星号和减号、加号表示无序标记。     
 
+### 段落
+前后空行
