@@ -1,0 +1,34 @@
+version: '2'
+
+services:
+  spaceshipgo:
+    build: .
+    # image: spaceshipgo
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    ports:
+      - 8002:8080
+    restart: always
+    networks:  
+      - code-network  
+  mysql:
+    image: mysql
+    # build: ./common/database
+    ports:
+      - 8003:3306
+    restart: always
+    volumes:
+      - "/Users/donson/Documents/WorkSpace/share/myss:/var/lib/mysql"
+      - "/Users/donson/Documents/WorkSpace/share:/etc/mysql/conf.d"
+    environment:
+      MYSQL_USER: root  
+      MYSQL_PASSWORD: 123 
+      MYSQL_ROOT_PASSWORD: 123
+    networks:  
+      - code-network
+networks:  
+  code-network:  
+    driver: bridge
+      
