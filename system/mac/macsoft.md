@@ -71,4 +71,28 @@ sudo rm -rf \
 /Library/Tcl/macports1.0 \
 ~/.macports
 ```
+## tree
+目录结构生成软件
 
+### 安装步骤
+```
+brew install tree
+```
+### 常用命令
+- tree -a 查看当前后某文件夹下所有文件
+- tree -d 只显示文件夹
+- tree -L n 显示项目的层级，n表示层级数，想显示三层可用tree -l 3
+- tree -I pattern 过滤不想显示的文件或者文件夹,如过滤node_module, tree -I
+  "node_module"
+- tree > tree.md 结果写入到tree.md中
+### 示例
+```
+├── asset
+│   └── images
+│       ├── dp.png
+│       ├── gorp.jpg
+│       └── spider.jpg
+├── editorlang
+│   └── markdown 
+│       └── markdown.md
+```
