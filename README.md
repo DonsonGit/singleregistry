@@ -2,46 +2,51 @@
 我的笔记本
 ****
 # 目录
-[/CNCF][1] 云原生计算基金会     
-|--[/docker][1-1] Docker笔记     
-|----[/files][1-1-1] Docker文件     
-|--[/kubernetes][1-2] Kubernetes笔记     
-|----[/yamlfiles][1-2-1] Kubernetes Yaml文件     
-|------[/etcd][1-2-1-1] etcd     
-|------[/kubernetes-dashboard][1-2-1-2] dashboard     
-[/algorithm][2] 算法     
-[/editorlang][3] 编辑器(Vim,VSCode...)     
-|--[/markdown][3-1] Markdown笔记     
-[/language][4] 语言     
-|--[/go][4-1] Go笔记     
-|--[/node][4-2] Node笔记     
-[/mobile][5] 移动端项目框架整理     
-|--[/ios][5-1] IOS     
-|----[/object-c][5-1-1] OC     
-|------[/base-oc-framework][5-1-1-1] OC项目基础框架     
-|----[/swift][5-1-2] Swift     
-[/server][6] 服务端     
-|--[/spider][6-1] 爬虫     
-[/README.md][7] 说明文件     
-
-[1]:https://github.com/DonsonGit/singleregistry/tree/master/CNCF
-[1-1]:https://github.com/DonsonGit/singleregistry/tree/master/CNCF/docker
-[1-1-1]:https://github.com/DonsonGit/singleregistry/tree/master/CNCF/docker/files
-[1-2]:https://github.com/DonsonGit/singleregistry/tree/master/CNCF/kubernetes
-[1-2-1]:https://github.com/DonsonGit/singleregistry/tree/master/CNCF/kubernetes/yamlfile
-[1-2-1-1]:https://github.com/DonsonGit/singleregistry/tree/master/CNCF/kubernetes/yamlfile/etcd
-[1-2-1-2]:https://github.com/DonsonGit/singleregistry/tree/master/CNCF/kubernetes/yamlfile/kubernetes-dashboard
-[2]:https://github.com/DonsonGit/singleregistry/tree/master/algorithm
-[3]:https://github.com/DonsonGit/singleregistry/tree/master/editorlang
-[3-1]:https://github.com/DonsonGit/singleregistry/tree/master/editorlang/markdown
-[4]:https://github.com/DonsonGit/singleregistry/tree/master/language
-[4-1]:https://github.com/DonsonGit/singleregistry/tree/master/language/go
-[4-2]:https://github.com/DonsonGit/singleregistry/tree/master/language/node
-[5]:https://github.com/DonsonGit/singleregistry/tree/master/mobile
-[5-1]:https://github.com/DonsonGit/singleregistry/tree/master/mobile/ios
-[5-1-1]:https://github.com/DonsonGit/singleregistry/tree/master/mobile/ios/object-c
-[5-1-1-1]:https://github.com/DonsonGit/singleregistry/tree/master/mobile/ios/object-c/base-oc-framework
-[5-1-2]:https://github.com/DonsonGit/singleregistry/tree/master/mobile/ios/swift
-[6]:https://github.com/DonsonGit/singleregistry/tree/master/server
-[6-1]:https://github.com/DonsonGit/singleregistry/tree/master/server/spider
-[7]:#
+```
+├── CNCF ────────────────────────────────────────────────────────── 云原生计算基金会
+│   ├── docker ──────────────────────────────────────────────────── Docker笔记
+│   │   └── files ───────────────────────────────────────────────── Docker yml文件
+│   │       ├── docker-compose-drone.yml
+│   │       ├── docker-compose-gilab.yml
+│   │       └── docker-compose-mysql.yml
+│   └── kubernetes ──────────────────────────────────────────────── Kubernetes笔记
+│       ├── Minikube.md
+│       ├── installDashboard.md
+│       ├── loadBanlance.md
+│       └── yamlfile ────────────────────────────────────────────── Kubernetes yaml文件
+│           ├── etcd ────────────────────────────────────────────── etcd文件
+│           │   ├── etcd.yaml
+│           │   └── vulcand.yml
+│           └── kubernetes-dashboard ────────────────────────────── dashboard文件
+│               ├── dashboard-controller.yaml
+│               ├── dashboard-rbac.yaml
+│               └── dashboard-service.yaml
+├── README.md ───────────────────────────────────────────────────── 说明
+├── algorithm ───────────────────────────────────────────────────── 算法
+│   └── commonalgorithms.md
+├── asset ───────────────────────────────────────────────────────── 资源
+│   └── images ──────────────────────────────────────────────────── 图片资源
+│       ├── dp.png
+│       ├── gorp.jpg
+│       └── spider.jpg
+├── editorlang ──────────────────────────────────────────────────── 编辑器语言
+│   └── markdown ────────────────────────────────────────────────── Markdown
+│       └── markdown.md
+├── language ────────────────────────────────────────────────────── 语言
+│   ├── go ──────────────────────────────────────────────────────── Go语言笔记
+│   │   └── goskills.md
+│   │   └── goskills.md
+│   └── node ────────────────────────────────────────────────────── Node笔记
+│       └── npm.md
+├── mobile ──────────────────────────────────────────────────────── 移动端基础项目
+│   └── ios ─────────────────────────────────────────────────────── ios基础项目
+│       └── object-c ────────────────────────────────────────────── OC基础项目
+│           └── base-oc-framework ───────────────────────────────── 基础项目
+├── server ──────────────────────────────────────────────────────── 服务端
+│   └── spider ──────────────────────────────────────────────────── 爬虫
+│       └── spider map.graffle.zip ──────────────────────────────── 爬虫技能树
+└── system ──────────────────────────────────────────────────────── 系统笔记
+    ├── linuxSystem.md
+    └── mac ─────────────────────────────────────────────────────── mac系统笔记
+        └── macsoft.md
+```
