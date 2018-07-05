@@ -97,3 +97,31 @@ brew install tree
 │   └── markdown 
 │       └── markdown.md
 ```
+
+## gdb
+可执行程序调试工具（**强大**）
+
+### 安装步骤
+```
+brew search gdb
+
+brew install gdb
+```
+### 配置证书
+打开钥匙串 -> 钥匙串访问 -> 证书助理 -> 创建证书
+
+#### 填写
+- 名称：gdb-cert
+- 身份类型：自签名根证书
+- 证书类型：代码签名
+- 勾选让我覆盖这些默认值
+#### 继续到最后直到
+- 钥匙串：系统
+- 创建
+#### 在钥匙串 -> 系统中查看刚刚创建的证书
+- 双击
+- 点击信任
+- 全部选择始终信任
+- 打开终端，执行命令`sudo codesign -s gdb-cert /usr/local/bin/gdb`
+
+
