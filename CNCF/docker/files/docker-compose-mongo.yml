@@ -1,0 +1,15 @@
+version: '2'
+services:
+  mongodb:
+    image: 'mongodb'
+    restart: unless-stopped
+    hostname: mongodb
+    expose:
+      - 27017
+    ports:
+      - 27017:27017
+    volumes:
+      - /Users/donson/Documents/share/mongodb:/data/db
+    network_mode: 'bridge'
+    tty: true
+    stdin_open: true
