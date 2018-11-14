@@ -1,0 +1,373 @@
+execute pathogen#infect()
+syntax on
+filetype plugin on
+filetype indent on
+
+call plug#begin('~/.vim/plugged')
+Plug 'fatih/vim-go'
+Plug 'fatih/molokai'
+" Plug 'Valloric/YouCompleteMe'
+Plug 'Shougo/deoplete.nvim', {'do': 'UpdateRemotePlugins'}
+Plug 'zchee/deoplete-go', {'do': 'make'}
+Plug 'SirVer/ultisnips'
+Plug 'dyng/ctrlsf.vim'
+Plug 'honza/vim-snippets'
+Plug 'scrooloose/nerdcommenter'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'majutsushi/tagbar'
+Plug 'jiangmiao/auto-pairs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'kien/ctrlp.vim'
+Plug 'fholgado/minibufexpl.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
+" Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
+Plug 'morhetz/gruvbox'
+
+" /搜索增强，高亮所有搜索结果
+Plug 'haya14busa/incsearch.vim'
+" 平滑滚动
+" Plug 'terryma/vim-smooth-scroll'
+" 简化选区
+Plug 'terryma/vim-expand-region'
+" 多光标输入
+" Plug 'terryma/vim-multiple-cursors'
+call plug#end() 
+
+let mapleader = " "
+
+" 外观和辅助 {{{
+	" 外观
+	set number									"显示行号"
+	set showtabline=0							"隐藏顶部标签行"
+	set guioptions-=r							"隐藏右侧滚动条"
+	set guioptions-=L							"隐藏左侧滚动条"
+	set guioptions-=b							"隐藏底部滚动条"
+	set cursorline								"突出显示当前行"	
+	set cursorcolumn							"突出显示当前列"
+	set hlsearch								"高亮搜索"
+	set t_Co=256								"设置支持256色彩"
+	colorscheme gruvbox 
+	set background=dark
+	set noswapfile								"设置不生成缓存文件"
+	set iskeyword+=_,$,@,%,#,- 					"带有这些符号的单词不要被换行拆分"
+	set showmatch								"高亮括号匹配"
+	au FileType go set nocursorcolumn
+	au FileType go syntax sync minlines=128
+	au FileType go set synmaxcol=128
+	au FileType go set re=1
+	au FileType go set ttyfast
+	au FileType go set lazyredraw
+
+	" 辅助
+	set nowrap									"设置代码不拆行"
+	set tabstop=4								"设置tab空格数"
+	set shiftwidth=4							"每一级缩进空格数"
+	set showmatch								"显示匹配括号"
+	set scrolloff=5								"距离顶部和底部5行"
+	set laststatus=2							"命令行为两行"
+	set backspace=indent,eol,start 				"删除键"
+	set mouse=a									"鼠标"
+	set clipboard=unnamed 
+	set ignorecase smartcase					"设置搜索大小写，若包含大写则敏感，反之不敏感"
+	set list									"显示<Tab>和<EOL>"
+	set listchars=tab:»·,trail:·,nbsp:·			"list模式下显示用的字符串"
+
+
+	" 按键
+	nnoremap <Leader>/ :nohl<CR>
+" }}}
+
+" vim-Go Settings {{{
+	let g:go_highlight_functions = 1
+	let g:go_highlight_methods = 1
+	let g:go_highlight_fields = 1
+	let g:go_highlight_types = 1
+	let g:go_highlight_structs = 1
+	let g:go_highlight_operators = 1
+	let g:go_highlight_build_constraints = 1
+	let g:go_list_type = 'quickfix'
+	let g:go_fmt_command = 'goimports'
+	let g:go_def_mode = 'godef'
+	let g:go_fmt_autosave = 0
+	let g:go_gocode_unimported_packages = 1
+	
+	au FileType go nmap <leader>r  <Plug>(go-run)
+	au FileType go nmap <leader>b  <Plug>(go-build)
+	au FileType go nmap <leader>t  <Plug>(go-test)
+	au FileType go nmap <leader>c  <Plug>(go-coverage)
+	nnoremap <Leader>mm :GoFmt<CR>
+" }}}
+
+" NERDtee设定 {{{
+	let NERDTreeIgnore = ['\~$', '\.pyc$', '\.swp$', '\.DS*']				
+	let NERDChristmasTree = 1
+	let NERDTreeAutoCenter = 1
+	let NERDTreeBookmarksFile = $VIM.'\Data\NerdBookmarks.txt'
+	let NERDTreeMouseMode = 2
+	let NERDTreeShowBookmarks = 1
+	let NERDTreeShowFiles = 1
+	let NERDTreeShowHidden = 1
+	let NERDTreeShowLineNumbers = 1
+	let NERDTreeWinPos = 'left'
+	let NERDTreeWinSize = 31
+	let NERDTreeMinimalUI = 1
+
+	let g:NERDSpaceDelims = 1  					"NERD Commenter 注释，自动加空格
+	" NERDteeTabsToggle
+	" let g:nerdtree_tabs_open_on_console_startup = 1
+	nnoremap <F9> :NERDTreeToggle<CR>
+	aug NerdTree
+		autocmd!
+		" 关闭vim时，如果打开的文件除了NERDTree没有其他文件时，它自动关闭，减少多次按:q!
+		autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+		" 自动退出
+		autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
+	aug END
+" }}}
+
+" NerdTree Git Settings {{{
+	let g:NERDTreeIndicatorMapCustom = {
+	    \ "Modified"  : "✹",
+	    \ "Staged"    : "✚",
+	    \ "Untracked" : "✭",
+	    \ "Renamed"   : "➜",
+	    \ "Unmerged"  : "═",
+	    \ "Deleted"   : "✖",
+	    \ "Dirty"     : "✗",
+	    \ "Clean"     : "✔︎",
+	    \ "Unknown"   : "?"
+	    \ }
+	nnoremap <Leader>gc :Gcommit<CR>
+	nnoremap <Leader>gp :Gpush<CR>
+	" aug Git
+		" 保存时自动写入git
+		" autocmd bufwritepre *.js,*.go,*.html,*.json :normal Gwrite
+	" aug END
+" }}}
+
+" TagBar {{{
+	autocmd vimenter * NERDTree					" 打开vim时自动打开NERDTree
+	autocmd vimenter * nested :TagbarOpen		" 打开vim时自动打开tagbar
+	let g:tagbar_vertical=25 					"tagbar 分布"
+	let g:tagbar_compact=1 						"去除第一行的帮助信息"
+	let g:tagbar_autoshowtag=1 					"当编辑代码时，在Tagbar自动追踪变量"
+	let g:tagbar_iconchars=['▸', '▾'] 			"展开关闭文件夹的图标
+	let g:tagbar_type_go = {
+	        \ 'ctagstype' : 'go',
+	        \ 'kinds'     : [
+	            \ 'p:package',
+	            \ 'i:imports:1',
+	            \ 'c:constants',
+	            \ 'v:variables',
+	            \ 't:types',
+	            \ 'n:interfaces',
+	            \ 'w:fields',
+	            \ 'e:embedded',
+	            \ 'm:methods',
+	            \ 'r:constructor',
+	            \ 'f:functions'
+	        \ ],
+	        \ 'sro' : '.',
+	        \ 'kind2scope' : {
+	            \ 't' : 'ctype',
+	            \ 'n' : 'ntype'
+	        \ },
+	        \ 'scope2kind' : {
+	            \ 'ctype' : 't',
+	            \ 'ntype' : 'n'
+	        \ },
+	        \ 'ctagsbin'  : 'gotags',
+	        \ 'ctagsargs' : '-sort -silent'
+	\ }
+	nnoremap <F8> :TagbarToggle<CR>
+" }}}
+
+" YCM Settings {{{
+	" highlight Pmenu guibg=#000
+	" set completeopt-=preview
+	" let g:ycm_add_preview_to_completeopt = 0
+	" let g:ycm_cache_omnifunc = 1
+	" let g:ycm_key_list_select_completion = ['', '']
+	" let g:ycm_key_list_previous_completion = ['']
+	" let g:ycm_key_invoke_completion = '<C-Space>'
+	" let g:ycm_filetype_whitelist = {
+				" \ 'go':1,
+				" \ }
+	" aug YCM
+		" " 离开插入模式后自动关闭预览窗口
+		" autocmd InsertLeave * if pumvisible() == 0 | pclose | endif
+	" aug END
+" }}}
+
+" Deoplete NeoVim/Vim8异步自动补全插件 {{{
+	set completeopt+=noselect
+	set completeopt+=noinsert
+	set completeopt-=preview
+	if has('nvim')
+		let g:python_host_prog = '/usr/bin/python'
+		let g:python_host_skip_check = 1
+		let g:python3_host_prog = '/usr/local/bin/python3'
+		let g:python3_host_skip_check = 1
+	endif
+	let g:deoplete#enable_at_startup = 0
+	aug Deoplete
+		autocmd!
+		autocmd InsertEnter * call deoplete#enable()
+	aug END
+	let g:deoplete#auto_complete_delay = 0
+	let g:deoplete#ignore_sources = {}
+	let g:deoplete#ignore_sources.go = ['around']
+	let g:deoplete#max_list = 8
+
+	" Go Settings
+	let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+	let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+	let g:deoplete#sources#go#pointer = 1
+" }}}
+
+" UltiSnips Settings {{{
+	let g:UltiSnipsExpendTrigger = "<tab>"
+	let g:UltiSnipsJumpForwardTrigger = "<c-b>"
+	let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
+" }}}
+
+" CtrlSf {{{
+	" 设置默认模式，normal为左半屏搜索结果，右半屏为预览窗口。compact类似于ctrlp的quickfix窗口模式
+	" let g:ctrlsf_ignore_dir 指定搜索时忽略的目录
+	let g:ctrlsf_default_view_mode = 'compact'
+	let g:ctrlsf_search_mode = 'async'
+	nnoremap <C-f> :CtrlSF<Space>
+	nnoremap <Leader>fc :CtrlSFClose<CR>
+	nnoremap <Leader>ff :CtrlSFFocus<CR>
+" }}}
+
+" CtrlP Settings {{{
+	let g:ctrlp_map = '<c-p>'
+	let g:ctrlp_cmd = 'CtrlP'
+	
+	let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,result:20'
+	let g:ctrlp_working_path_mode = 'rw'
+" }}}
+
+" MiniBufExplore Settings {{{
+	" 创建新窗口
+	nnoremap <Leader>nn :new<CR>
+	nnoremap <Leader>vv :vnew<CR>
+	
+	" buffer快速导航
+	nnoremap <Leader>b :bp<CR>
+	nnoremap <Leader>f :bn<CR>
+	
+	" 查看buffers
+	nnoremap <Leader>ls :ls<CR>
+	nnoremap <Leader>ll :b<Space>
+	
+	" 删除Buffers
+	nnoremap <Leader>d :bd<Space>
+	
+	" 通过索引快速跳转
+	nnoremap <Leader>1 :1b<CR>
+	nnoremap <Leader>2 :2b<CR>
+	nnoremap <Leader>3 :3b<CR>
+	nnoremap <Leader>4 :4b<CR>
+	nnoremap <Leader>5 :5b<CR>
+	nnoremap <Leader>6 :6b<CR>
+	nnoremap <Leader>7 :7b<CR>
+	nnoremap <Leader>8 :8b<CR>
+	nnoremap <Leader>9 :9b<CR>
+	nnoremap <Leader>0 :10b<CR>
+" }}}
+
+" vim-airline {{{
+	" let g:airline#extensions#tabline#enabled = 1
+	let g:airline#extensions#tabline#left_sep = ' '
+	let g:airline#extensions#tabline#left_alt_sep = '|'
+	let g:airline_theme = 'dark'
+	let g:airline_powerline_fonts = 0
+	let g:airline#extensions#tabline#exclude_preview = 1
+	let g:airline#extensions#tabline#show_buffers = 1
+	let g:airline#extensions#tabline#tab_nr_type = 2
+	let g:airline#extensions#bufferline#enabled = 1
+" }}}
+
+
+" vimrc 操作 {{{
+	" 打开编辑vimrc
+	nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
+	
+	" 编译vimrc
+	nnoremap <Leader>sv :source $MYVIMRC<CR>
+	
+	" 切换ESC为jk
+	inoremap jk <ESC>
+
+	" 缩写abbreviations
+	" :iabbrev waht what
+" }}}
+
+" syntastic {{{
+	" set statusline+=%#warningmsg#
+	" set statusline+=%{SyntasticStatuslineFlag()}
+	" set statusline+=%*
+
+	" let g:syntastic_check_on_wq = 1
+	" let g:syntastic_auto_jump = 1
+	" let g:syntastic_auto_loc_list = 1
+	" let g:syntastic_error_symbol = '▶▶'
+	" let g:syntastic_warning_symbol = '⚠'
+	" " 高亮错误
+	" let g:syntastic_enable_highlighting = 1
+
+	" let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+	" let g:syntastic_mode_map = {"mode": 'active', 
+		" \ 'active_filetypes': ["go", 'python'],
+		" \ 'passive_filetypes': ["shell"]}
+" }}}
+
+" ALE Settings {{{
+	" let g:ale_completion_enabled = 1
+	let g:airline#extensions#ale#enabled = 1
+	let g:ale_set_signs = 1
+	let g:ale_sign_column_always = 0			"保持侧边栏可见
+	let g:ale_sign_error = '>>'					"改变错误标识
+	let g:ale_sign_warning = '--'				"改变警告标识
+	let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok'] "状态栏格式信息
+	" let g:ale_echo_delay = 0
+	" let g:ale_echo_msg_error_str = 'E'			"改变命令行消息
+	" let g:ale_echo_msg_waring_str = 'W'			
+	let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+	let g:ale_open_list = 0
+	let g:ale_set_highlights = 1
+	" let g:ale_lint_on_text_changed = 'normal'
+	" let g:ale_lint_delay = 0 
+	" let g:ale_lint_on_insert_leave = 1
+	let g:ale_linters = {
+		\ 'go': ['gometalinter', 'gofmt'],
+		\ }
+
+	hi! clear SpellBad
+	hi! clear SpellCap
+	hi! clear SpellRare
+	hi! SpellBad gui=undercurl guisp=red
+	hi! SpellCap gui=undercurl guisp=blue
+	hi! SpellRare gui=undercurl guisp=magenta
+	
+	" nmap [a <Plug>(ale_previous_warp)
+	" nmap ]a <Plug>(ale_next_warp)
+	nnoremap [a :ALEPreviousWrap<CR>
+	nnoremap ]a :ALENextWrap<CR>
+" }}}
+
+" vim-smooth-scroll Settings {{{
+	" noremap <slient> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+	" noremap <slient> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+" }}}
+
+" vim-multiple-cursors Settings {{{
+	" let g:multi_cursor_next_key='<C-m>'
+	" let g:multi_cursor_prev_key='<C-p>'
+	" let g:multi_cursor_skip_key='<C-x>'
+	" let g:multi_cursor_quit_key='<Esc>'
+"s}}}
